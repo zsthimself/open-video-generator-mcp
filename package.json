@@ -1,0 +1,35 @@
+{
+  "name": "open-video-generator-mcp",
+  "version": "1.0.0",
+  "description": "Official MCP server and stdio bridge for OpenVideoGenerator — generate AI videos across Kling, MiniMax, Luma, and Hunyuan, poll render jobs, and search curated prompt blueprints.",
+  "type": "module",
+  "bin": {
+    "open-video-generator-mcp": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.mjs",
+    "check": "node ./bin/cli.mjs --check",
+    "test": "node --test ./test/bridge.test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-video",
+    "video-generation",
+    "kling-ai",
+    "minimax",
+    "luma",
+    "hunyuan",
+    "openvideogenerator"
+  ],
+  "author": "OpenVideoGenerator (https://openvideogenerator.com)",
+  "license": "MIT",
+  "homepage": "https://openvideogenerator.com/settings/apikeys",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zsthimself/open-video-generator-mcp.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

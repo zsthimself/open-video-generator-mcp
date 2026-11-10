@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zsthimself/open-video-generator-mcp",
+  "title": "OpenVideoGenerator MCP Server",
+  "description": "AI video generation MCP server for Kling, MiniMax, Luma, and Hunyuan with prompt blueprints and async job polling.",
+  "websiteUrl": "https://openvideogenerator.com",
+  "repository": {
+    "url": "https://github.com/zsthimself/open-video-generator-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://openvideogenerator.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer API key (format: Bearer sk_...) from https://openvideogenerator.com/settings/apikeys",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
