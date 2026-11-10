@@ -1,0 +1,31 @@
+name: Publish to Official MCP Registry
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install mcp-publisher
+        run: |
+          curl -fsSL -L "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.9/mcp-publisher_linux_amd64.tar.gz" | tar -xz -C /usr/local/bin mcp-publisher
+          mcp-publisher --version
+
+      - name: Validate server.json
+        run: mcp-publisher validate server.json
+
+      - name: Authenticate via GitHub OIDC and publish
+        run: |
+          mcp-publisher login github-oidc
+          mcp-publisher publish
