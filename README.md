@@ -1,5 +1,7 @@
 # OpenVideoGenerator MCP Server
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/zsthimself/open-video-generator-mcp)
+
 Official Model Context Protocol (MCP) server and zero-dependency stdio bridge for [OpenVideoGenerator](https://openvideogenerator.com) — generate cinematic AI videos across **Kling AI**, **MiniMax Hailuo**, **Luma Dream Machine**, and **Tencent Hunyuan Video** directly from Cursor, Claude Desktop, Claude Code, and autonomous agents.
 
 ## Available Tools
@@ -13,6 +15,8 @@ Official Model Context Protocol (MCP) server and zero-dependency stdio bridge fo
 ## Option 1: Direct Streamable HTTP (Recommended)
 
 Most modern MCP clients (Cursor, Claude Code, Antigravity) connect directly to the hosted Streamable HTTP endpoint:
+
+
 
 - **Endpoint**: `https://openvideogenerator.com/api/mcp`
 - **API Key**: Create a key at [openvideogenerator.com/settings/apikeys](https://openvideogenerator.com/settings/apikeys) (new accounts receive 50 free welcome credits).
